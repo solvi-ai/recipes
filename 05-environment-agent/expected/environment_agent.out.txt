@@ -1,0 +1,11 @@
+Part 1 — the same world met again needs fewer slow decisions
+  world 7, run 1: 61 steps, 6 of 6 goals, System 1 0, System 2 61, fallback 0, refused 23
+  world 7, run 2: 12 steps, 6 of 6 goals, System 1 11, System 2 1, fallback 0, refused 0
+  world 8 (new): 17 steps, 6 of 6 goals, System 1 4, System 2 13, fallback 0, refused 3
+  every decision replays: 90 of 90; the knowledge journal verifies: True
+  learned: collect_stone needs ["'stone'"] here and a pickaxe ['True']
+
+Part 2 — protection vs justified risk (30 episodes on a world with a breaking bridge to the iron)
+  protect : iron in 2 of 30 episodes, fell 1 times, 0 risky crossings, 5.07 goals per episode
+  risk    : iron in 24 of 30 episodes, fell 6 times, 27 risky crossings, 5.80 goals per episode
+  the gate 'no bridge without the stone pickaxe' held in both: True

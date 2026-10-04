@@ -1,0 +1,5 @@
+head over 7 facts, fitted on 866 pairs
+guarantee on 878 pairs: threshold 0.6053, answered alone 96.5%
+  P(answered alone and wrong) ≤ 0.01 — a share of all inputs — for inputs like the calibration examples
+test, 874 pairs: F1 head 0.964 (offers with two counterparts: 13) -> with one counterpart per offer 0.987 (0); 13 answers changed, exact: True
+answered alone 96.3%, wrong among them 9 (1.03% of all pairs; promise 1%)

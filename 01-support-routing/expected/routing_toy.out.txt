@@ -1,0 +1,22 @@
+Question 'team': 2000 labelled examples, shuffled with seed 0: 1500 to fit System 1, 250 to calibrate System 1's guarantee, 250 to calibrate the dispatcher.
+System 1: a ridge head (System.fit) fitted on 1500 examples, reading 4 facts: account_words, technical_words, shipping_words, billing_words.
+Its signal: the answer's confidence.
+Its promise: error among the answers given alone ≤ 0.05 with probability ≥ 0.9, for inputs like the calibration examples. Calibrated on 250 examples: threshold 0.5895, answered alone 82.0%, error among them 0.00%, P(alone and wrong) 0.00%; AUROC of the signal 0.95.
+Slow path: the function reader over text, subject.
+Is a slice open to it? The probe on the dispatcher's 250 examples: System 1 held back 39 on the 'guarantee' slice.
+  slice 'guarantee' (39 calibration examples): the slow path's answer when its confidence ≥ 1 (right on this slice: System 1 56%, slow path 95%, slow path agreeing with System 1 95%)
+All answers given alone together: error among the answers given alone ≤ 0.05 with probability ≥ 0.9, for inputs like the calibration examples; on the 250 calibration examples: answered alone 100.0%, P(alone and wrong) 0.80%.
+Woken by: guarantee, abstain, constraint, agreement, drift, supervise; held back by the open-set gate → a person; after a drift flag System 1's answers are checked by the slow path and a disagreement goes to a person.
+Budget: none.
+Record: every decision and the policy, hash-chained, in JSONLStorage.
+Not covered: inputs unlike the examples; the promise holds for inputs like the examples, so calibrate again when the inputs change.
+
+novel=False
+  before the shift: by {'s1': 452, 's2': 148, 'human': 0}, wrong among answered alone 0.5% of 600
+  after  the shift: by {'s1': 395, 's2': 205, 'human': 0}, wrong among answered alone 37.2% of 600
+  replay failures: 0
+novel='auto'
+  before the shift: by {'s1': 165, 's2': 0, 'human': 435}, wrong among answered alone 0.0% of 165
+  after  the shift: by {'s1': 92, 's2': 0, 'human': 508}, wrong among answered alone 0.0% of 92
+  replay failures: 0
+  open-set gate flag: 680 | signals below 0.59: CUSUM 10.6 ≥ 10.3 (tuned to a share of 0.1; since decision 177)

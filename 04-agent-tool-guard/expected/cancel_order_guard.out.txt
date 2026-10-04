@@ -1,0 +1,15 @@
+1. before the identity check       -> deny     
+                                      not confirmed by the user: the user has not explicitly accepted any message of yours ("yes", "go ahead", "please proceed")
+                                      agenda_allows: No gate of the knowledge's agenda blocks this call. — gate identity_first [deny]
+2. no yes from the customer yet    -> deny     
+                                      not confirmed by the user: the user has not explicitly accepted any message of yours ("yes", "go ahead", "please proceed")
+3. an order a tool output named    -> deny     
+                                      not in the conversation: order_id='#W9034102'
+                                      not confirmed by the user: no message of yours that the user accepted names order_id='#W9034102' (the closest, accepted with 'Yes, go ahead.', does n…
+                                      owns_the_order: The customer can cancel only their own orders. [deny]
+4. restated, customer said yes     -> allow    cancelled #W1001
+5. a delivered order, first time   -> allow    error: #W1002 is delivered and cannot be cancelled
+                                      knowledge: cancel_order with status 'delivered' -> refuse
+6. the same kind of call again     -> deny     
+                                      action_model_allows: The knowledge's action model does not predict that the environment refuses this call. — refused before when status='delivered' […
+stored: 6 | chain verifies: True | decisions that do not replay: []

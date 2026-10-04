@@ -1,0 +1,17 @@
+
+CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT (15,176 characters)
+  Governing Law                lawyers: present | contract[14093:14380] = 'This Agreement was entered into in the State of Florida, and'… literal: True, confidence 0.99 -> right
+  Non-Compete                  lawyers: absent  | not stated (confidence 0.95) -> right
+  Termination For Convenience  lawyers: present | contract[10880:10996] = 'Either party may terminate this Agreement without cause at a'… literal: True, confidence 0.99 -> right
+
+HERTZGLOBALHOLDINGS,INC_07_07_2016-EX-10.4-INTELLECTUAL PROPERTY AGREEMENT (30,968 characters)
+  Governing Law                lawyers: present | contract[24496:24889] = 'Governing Law. This Agreement and all disputes or controvers'… literal: True, confidence 1.00 -> right
+  Non-Compete                  lawyers: present | contract[23746:24489] = '9. Non-Competition. During the Interim Period, neither HERC '… literal: True, confidence 1.00 -> right
+  Termination For Convenience  lawyers: absent  | not stated (confidence 0.95) -> right
+
+CYBERIANOUTPOSTINC_07_09_1998-EX-10.13-PROMOTION AGREEMENT (25,288 characters)
+  Governing Law                lawyers: present | contract[21761:21958] = '9.6 Applicable Law. This Agreement will be construed in acco'… literal: True, confidence 1.00 -> right
+  Non-Compete                  lawyers: present | contract[12632:14009] = '5. Exclusivity. For purposes of this agreement "Competing Co'… literal: True, confidence 0.97 -> right
+  Termination For Convenience  lawyers: present | contract[11706:12384] = '4. Term and Termination. The term of this Agreement (the "Te'… literal: True, confidence 0.97 -> right
+
+9 of 9 right against the annotation; 7 of 7 quotes literally in the contract

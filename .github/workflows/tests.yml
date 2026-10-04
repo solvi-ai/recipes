@@ -1,0 +1,31 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"        # weekly: a new release of a dependency should not break a recipe unnoticed
+  workflow_dispatch:
+
+jobs:
+  offline:
+    # Every recipe's offline test: no model, no network, no downloaded data (tests that need them are skipped).
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install each recipe's requirements
+        run: |
+          uv venv
+          for r in */requirements.txt; do uv pip install -r "$r"; done
+      - name: Run the offline tests
+        env:
+          OMP_NUM_THREADS: "2"
+        run: .venv/bin/python -m pytest -v

@@ -1,0 +1,9 @@
+Part 1 — an LLM proposes, solvi keeps only passages that are in the contract
+  governing_law                contract[775:930] = '6. Governing Law. This Agreement is governed by the laws of the Republ'… literal: True, confidence 1.00
+  non_compete                  contract[450:637] = '4. Exclusivity. During the Term and for twelve (12) months after it, P'… literal: True, confidence 0.99
+  termination_for_convenience  not stated (confidence 0.95)
+
+Part 2 — what happens to a quote a model writes (offline)
+  'governed by the laws of the Republic of Ireland'       -> found at [811:858], stored as 'governed by the laws of the Republic of Ireland'
+  'governed by the laws of the Republic\xa0of\xa0Ireland' -> found at [811:858], stored as 'governed by the laws of the Republic of Ireland'
+  'governed by Irish law'                                 -> not in the text: rejected

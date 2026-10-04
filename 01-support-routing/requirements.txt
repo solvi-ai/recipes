@@ -1,0 +1,3 @@
+solvi==1.0.0
+scikit-learn>=1.5    # banking77_stream.py only (the router)
+pytest>=8           # the test only

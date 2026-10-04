@@ -1,0 +1,10 @@
+Abt-Buy: 1081 + 1092 offers; labelled pairs: train 5743, valid 1916, test 1916 (206 matches)
+head over 17 facts, fitted on 5743 train pairs
+guarantee on 1916 valid pairs: threshold 0.8133, answered alone 96.6%
+  P(answered alone and wrong) ≤ 0.01 — a share of all inputs — for inputs like the calibration examples
+
+test, 1916 pairs
+  head alone:                precision 0.989, recall 0.879, F1 0.931; offers matched to more than one counterpart: 1
+  head + one counterpart:    precision 0.995, recall 0.879, F1 0.933; offers matched to more than one counterpart: 0
+  one counterpart changed 1 answers, feasible True, exact True
+  answered alone 96.9%; answered alone and wrong 11 = 0.57% of all pairs (promise 1%); wrong among the matches answered alone 0 of 164

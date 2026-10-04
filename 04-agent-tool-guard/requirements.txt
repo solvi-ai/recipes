@@ -1,0 +1,2 @@
+solvi==1.0.0
+pytest>=8           # the test only

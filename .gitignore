@@ -1,0 +1,11 @@
+# downloaded datasets: never committed (Abt-Buy has no licence; the others are fetched from their sources)
+data/
+# Python
+__pycache__/
+*.py[oc]
+.pytest_cache/
+.venv/
+venv/
+# solvi stores written by a run outside a temp dir
+*.decisions.jsonl
+.env

@@ -1,0 +1,17 @@
+Banking77: 5967 requests to fit, 1492 to calibrate, 57 known intents; a stream of 2000 (ids ab9d7d44f169), shift at request 1000
+promise: at most 5% wrong among the answers given alone
+
+plain promise
+  before the shift: answered alone  80.8%, wrong among them  2.5% (20 of 808)
+  after  the shift: answered alone  58.5%, wrong among them 16.4% (96 of 585)
+    of which known intents:  answered alone  82.9%, wrong among them  1.8% (9 of 498)
+    of which unseen intents: answered alone  21.8%, wrong among them 100.0% (87 of 87)
+  stored decisions: chain verifies True; 100 replayed, 0 failed
+
+open-set gate
+  before the shift: answered alone  57.6%, wrong among them  0.7% (4 of 576)
+  after  the shift: answered alone  13.7%, wrong among them  0.7% (1 of 137)
+    of which known intents:  answered alone  22.6%, wrong among them  0.0% (0 of 136)
+    of which unseen intents: answered alone   0.3%, wrong among them 100.0% (1 of 1)
+  flag: 68 requests after the shift
+  stored decisions: chain verifies True; 100 replayed, 0 failed
